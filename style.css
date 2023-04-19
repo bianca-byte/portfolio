@@ -1,0 +1,365 @@
+/* ------------ universal styling ------------ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 4px 0;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+body {
+  /*   background-color: #fafafa; */
+  font-size: 15px;
+  /*   font-weight: normal; */
+  overflow: hidden;
+  margin: 0px;
+}
+
+p {
+  margin: 16px 0px;
+}
+
+.links {
+  margin: 16px 0px 0px 16px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li a {
+  font-size: 15px;
+}
+
+.main-container {
+  display: flex;
+}
+
+.split1 {
+  /*   margin-left: 20px; */
+  padding-right: 20px;
+  height: 100vh;
+  width: 30%;
+  /*     background-color: blue; */
+  overflow: scroll;
+  overflow-x: hidden; /*   overflow-x: hidden; */
+}
+
+.split2 {
+  margin-left: 40px;
+  /*   padding-right: 20px; */
+  height: 100vh;
+  width: 70%;
+  /*     background-color: blue; */
+  overflow: scroll;
+  overflow-x: hidden; /*   overflow-x: hidden;
+ */
+  /*   overflow: scroll; */
+}
+
+iframe {
+  padding-right: 5%;
+  overflow-x: hidden;
+}
+
+/* ------------ fonts ------------ */
+
+/* ------------ links ------------ */
+
+.return {
+  position: fixed;
+  bottom: 0px;
+  margin-left: 16px;
+  margin-bottom: 15px;
+}
+
+.return a {
+  font-size: 25px;
+}
+
+.return a:hover {
+  color: red;
+  text-decoration: none;
+}
+.project-links:link {
+  color: black;
+}
+
+a {
+  font-family: Times New Roman, Serif;
+  text-decoration: none;
+  font-size: 15px;
+}
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.click {
+  transition: 0.2s;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+button {
+  font-family: Arial, Sans-Serif;
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+  /*   background: #fafafa; */
+  cursor: pointer;
+}
+
+.home {
+  perspective: 3000px;
+  width: 70%;
+  position: absolute;
+  left: 26%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+}
+
+img.images.home {
+  max-width: 50vw;
+  transform: rotateX(70deg) rotateZ(-60deg) translate3d(-120px, 0px, 70px);
+  box-shadow: -80px 60px 15px 5px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s;
+  transform-style: preserve-3d;
+}
+
+img.images.home:hover {
+  transform: rotateX(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+/* -----------  left side -----------  */
+
+.indent {
+  padding-left: 30px;
+}
+#voice {
+  align-items: center;
+  max-width: 20vw;
+  min-width: 10vw;
+  padding: 100px 0 100px 0;
+}
+
+.bio {
+  font-family: Times New Roman, Serif;
+  /*     column-count: 2; */
+  letter-spacing: 0.01rem;
+
+  line-height: 1.23em;
+  margin: 20px;
+  /*letter-spacing: 0.02em;*/
+  /*   padding-bottom: 0px; */
+  /*   padding-right: 40px; */
+}
+
+/* -----------------------  right side -----------------------  */
+
+.project-description {
+  max-width: 80%;
+  /*   padding-left: 1.5%; */
+}
+
+#hide {
+  display: none;
+}
+
+/* --------- images & captions ---------  */
+
+#entries {
+  /*   overflow: scroll; */
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin-left: 6%;
+
+  /*   max-height: 300px; */
+}
+
+.entry {
+  display: block;
+
+  max-width: 100%;
+  /*   max-height: 100%; */
+  margin: 10px;
+}
+.image {
+  max-width: 90%;
+  max-height: 700px;
+}
+
+.entry img {
+  /*   max-height: 500px; */
+  /*   min-width: 60%; */
+  max-width: 90%;
+  /*   min-height: 60%; */
+  max-height: 700px;
+  /*   height: 100%; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.caption {
+  max-width: 700px;
+  height: 60px;
+  font-size: 12px;
+  font-family: Arial, Sans-Serif;
+  /* background-color: pink; */
+}
+.caption p {
+  width: 100%;
+  white-space: normal;
+}
+
+.caption a {
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+/* ----- Mobile   ------- */
+@media screen and (max-width: 560px) {
+  body {
+    font-weight: normal;
+    overflow: none;
+    
+  }
+
+  p {
+    margin: 16px 0px;
+  }
+
+  .split1 {
+    width: 40%;
+  }
+
+  .split2 {
+    margin-left: 20px;
+    height: 100vh;
+  }
+
+  #entries {
+    margin-left: 0%;
+  }
+  .entry {
+    display: block;
+    max-width: 100%;
+    min-width: 80%;
+    margin-right: 20px;
+  }
+
+  .entry img {
+    max-height: 85%;
+    max-width: 100%;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: -10px;
+  }
+
+  .caption {
+    max-width: 700px;
+    height: 30px;
+    font-size: 11px;
+    font-family: Arial, Sans-Serif;
+    /* background-color: pink; */
+  }
+  
+  .return {
+  position: relative;
+  bottom: 0px;
+  margin-left: 16px;
+  margin-bottom: 15px;
+}
+  
+  .home {
+  perspective: 3000px;
+  width: 70%;
+  position: absolute;
+  left: 43%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+}
+
+img.images.home {
+  max-width: 50vw;
+  transform: rotateX(70deg) rotateZ(-60deg) translate3d(-120px, 0px, 70px);
+  box-shadow: -80px 60px 15px 5px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s;
+  transform-style: preserve-3d;
+}
+
+img.images.home:hover {
+  transform: rotateX(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+  .right-image-container {
+    /*     padding-bottom: 10px; */
+  }
+}
+
+/* ---------PRINT--------- */
+
+@media print {
+  /* All your print styles go here */
+
+  body {
+    position: static;
+    overflow: initial;
+  }
+
+  .split1 {
+    display: none !important;
+  }
+
+  .split2 {
+    min-width: 99vw;
+    max-width: 100vw;
+    max-height: 100%;
+
+    position: relative;
+    overflow: visible !important;
+  }
+
+  .entry img {
+    /*   max-height: 500px; */
+    /*   min-width: 60%; */
+    max-width: 90%;
+    /*   min-height: 60%; */
+    max-height: 400px;
+    /*   height: 100%; */
+    page-break-before: always;
+    /*     box-shadow: none;
+ */
+  }
+
+  .entry p {
+    display: none;
+  }
+
+  /* 
+  p {
+    page-break-before: always;
+  } */
+}
